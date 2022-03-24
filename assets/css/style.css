@@ -12,3 +12,31 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+/* Panels placed in correct order */
+
+.left-top-quadrant {
+    background: navy;
+    border-top-left-radius: 80%;
+}
+
+.right-top-quadrant {
+    background: red;
+    border-top-right-radius: 80%;
+}
+
+.left-bottom-quadrant {
+    background: gold;
+    border-bottom-left-radius: 80%;
+}
+
+.right-bottom-quadrant {
+    background: green;
+    border-bottom-right-radius: 80%;
+}
+
+.quadrant {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
