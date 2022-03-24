@@ -18,25 +18,36 @@ body {
 .left-top-quadrant {
     background: navy;
     border-top-left-radius: 80%;
+    border: 5px solid black;
 }
 
 .right-top-quadrant {
     background: red;
     border-top-right-radius: 80%;
+    border: 5px solid black;
 }
 
 .left-bottom-quadrant {
     background: gold;
     border-bottom-left-radius: 80%;
+    border: 5px solid black;
 }
 
 .right-bottom-quadrant {
     background: green;
     border-bottom-right-radius: 80%;
+    border: 5px solid black;
 }
 
 .quadrant {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    margin-top: -4.83px;
+    margin-left: -4.83px;
+}
+
+#game {
+    text-align: center;
+    margin-top: 10%;
 }
