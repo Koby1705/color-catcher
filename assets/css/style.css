@@ -44,7 +44,7 @@ body {
 }
 
 .quadrant {
-    display: inline-block;
+    /* display: inline-block; */
     width: 200px;
     height: 200px;
     margin-top: -4.83px;
@@ -54,16 +54,4 @@ body {
 #game {
     text-align: center;
     margin-top: 10%;
-}
-
-/* Position inner circle to the center of the 4 quadrants */
-
-#circle {
-    background-color: lightslategray;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    position: absolute;
-    left: 42.5%;
-    top:38%;
 }
