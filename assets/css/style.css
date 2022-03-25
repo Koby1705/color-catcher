@@ -50,6 +50,8 @@ body {
     left: 50%;
 }
 
+/* Inner circle position */
+
 #circle {
     background-color: ghostwhite;
     width: 200px;
@@ -61,4 +63,58 @@ body {
     left: 50%;
     margin-top: -105px;
     margin-left: -100px;
+}
+
+/* Inner circle divisions style */
+
+#title {
+  position: absolute;
+  margin-top: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#switches {
+  position: absolute;
+  margin-left: 80px;
+  margin-top: 100px;
+}
+
+#go {
+  border-radius: 50%;
+  background-color: lightblue;
+  padding: 7px 16px;
+  margin-left: -10px;
+  margin-top: -10px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+#power {
+  position: absolute;
+  margin-left: -70px;
+  font-weight: 900;
+}
+
+#on {
+    position: absolute;
+    margin-left: -50px;
+}
+
+#turn {
+  position: absolute;
+  margin-left: -10px;
+  margin-top: 35px;
+  background: #550505;
+  color: red;
+  font-size: 15px;
+  height: 35px;
+  width: 60px;
+}
+
+#level {
+    position: absolute;
+    margin-left: -5px;
+    margin-top: 20px;
+    font-weight: 900;
 }
