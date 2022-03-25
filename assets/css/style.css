@@ -18,40 +18,34 @@ body {
 .left-top-quadrant {
     background: navy;
     border-top-left-radius: 80%;
-    border: 5px solid black;
+    margin-top: -200px;
+    margin-left: -200px;
 }
 
 .right-top-quadrant {
     background: red;
     border-top-right-radius: 80%;
-    border: 5px solid black;
+    margin-top: -200px;
 }
 
 .left-bottom-quadrant {
     background: gold;
     border-bottom-left-radius: 80%;
-    border: 5px solid black;
-    top: 50%;
-    left: 50%;
+    margin-left: -200px;
 }
 
 .right-bottom-quadrant {
     background: green;
     border-bottom-right-radius: 80%;
-    border: 5px solid black;
-    top: 50%;
-    left: 50%;
 }
+
+/* Class name for quadrants */
 
 .quadrant {
-    /* display: inline-block; */
     width: 200px;
     height: 200px;
-    margin-top: -4.83px;
-    margin-left: -4.83px;
-}
-
-#game {
-    text-align: center;
-    margin-top: 10%;
+    border: 5px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
