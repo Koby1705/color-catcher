@@ -19,6 +19,7 @@ onButton.addEventListener ("click", (event) => {
       on = false;
       levelCounter.innerHTML = "";
       clearInterval(intervalId);
+      clearColor ();
     }
 });
 
@@ -64,16 +65,18 @@ function gameTurn () {
   let flash;
   let level;
   let intervalId;
+  let compTurn;
   let compSequence = [];
 
   if (flash == level) {
     on = true;
-    let compTurn = false;
+    compTurn = false;
     clearInterval(intervalId);
     clearColor ();
   }
 
   if (compTurn) {
+    clearColor ();
     setTimeout (() => {
       if (compSequence[flash] == 1) firstQuadrant ();
       if (compSequence[flash] == 2) secondQuadrant ();
@@ -89,8 +92,10 @@ function gameTurn () {
  * Returns the colors to their original state after each flash is done by the computer
  */
 function clearColor () {
-  leftTopQuadrant.style.backgroundColor = "blue";
-  rightTopQuadrant.style.backgroundColor = "red";
-  leftBottomQuadrant.style.backgroundColor = "gold";
-  rightBottomQuadrant.style.backgroundColor = "green";
-}
+  leftTopQuadrant[0].style.backgroundColor = "navy";
+  rightTopQuadrant[0].style.backgroundColor = "red";
+  leftBottomQuadrant[0].style.backgroundColor = "gold";
+  rightBottomQuadrant[0].style.backgroundColor = "green";
+};
+
+
