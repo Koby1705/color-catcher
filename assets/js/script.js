@@ -50,7 +50,7 @@ function startGame () {
     compSequence.push(Math.floor(Math.random() * 4) + 1);
   }
   let compTurn = true;
-  
+
   intervalId = setInterval(gameTurn, 1000);
 };
 
@@ -70,7 +70,7 @@ function gameTurn () {
     on = true;
     let compTurn = false;
     clearInterval(intervalId);
-    // clearColor ();
+    clearColor ();
   }
 
   if (compTurn) {
@@ -84,3 +84,13 @@ function gameTurn () {
     }, 350);
   }
 };
+
+/**
+ * Returns the colors to their original state after each flash is done by the computer
+ */
+function clearColor () {
+  leftTopQuadrant.style.backgroundColor = "blue";
+  rightTopQuadrant.style.backgroundColor = "red";
+  leftBottomQuadrant.style.backgroundColor = "gold";
+  rightBottomQuadrant.style.backgroundColor = "green";
+}
