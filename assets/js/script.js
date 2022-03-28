@@ -2,7 +2,7 @@
 const leftTopQuadrant = document.getElementsByClassName("left-top-quadrant");
 const rightTopQuadrant = document.getElementsByClassName("right-top-quadrant");
 const leftBottomQuadrant = document.getElementsByClassName("left-bottom-quadrant");
-const rightBottomQuadrant = document.getElementsByClassName("right-bottom-quadrant")
+const rightBottomQuadrant = document.getElementsByClassName("right-bottom-quadrant");
 const onButton = document.getElementById("on");
 const goButton = document.getElementById("go");
 const levelCounter = document.getElementById("turn");
@@ -10,21 +10,23 @@ const levelCounter = document.getElementById("turn");
 // EventListener for power button to turn the game on
 onButton.addEventListener ("click", (event) => {
     let on;
+    let intervalId;
 
     if (onButton.checked == true) {
       on = true;
       levelCounter.innerHTML = "HI!";
     } else {
-      on = false
+      on = false;
       levelCounter.innerHTML = "";
+      clearInterval(intervalId);
     }
 });
 
 // EventListener for go button to start the game using start game function if the game is on
 // and also if player wins the game
 goButton.addEventListener ("click", (event) => {
-    let on;
-    let win;
+    let on = true;
+    let win = true;
 
     if (on == true || win == true) {
         startGame ();
@@ -35,18 +37,50 @@ goButton.addEventListener ("click", (event) => {
  *  The main game loop called when the "go" button is pressed
  */ 
 function startGame () {
-  win = false;
-  levelCounter.innerHTML = 1;
+  let win = false;
   let level = 1;
   let flash = 0;
   let intervalId = 0;
   let good = true;
   let compSequence = [];
   let humanSequence = [];
+  levelCounter.innerHTML = 1;
+
   for (let i = 0; i < 12; i++) {
-    compSequence.push(Math.floor(Math.random () * 4) + 1);
+    compSequence.push(Math.floor(Math.random() * 4) + 1);
   }
   let compTurn = true;
-
+  
   intervalId = setInterval(gameTurn, 1000);
-}
+};
+
+/**
+ * When invoked it flashes the colors every 350ms in random order & increments the level by 1
+ * when player guess the correct order
+ */
+function gameTurn () {
+  let on;
+  on = false;
+  let flash;
+  let level;
+  let intervalId;
+  let compSequence = [];
+
+  if (flash == level) {
+    on = true;
+    let compTurn = false;
+    clearInterval(intervalId);
+    // clearColor ();
+  }
+
+  if (compTurn) {
+    setTimeout (() => {
+      if (compSequence[flash] == 1) firstQuadrant ();
+      if (compSequence[flash] == 2) secondQuadrant ();
+      if (compSequence[flash] == 3) thirdQuadrant ();
+      if (compSequence[flash] == 4) fourthQuadrant ();
+
+      flash++;
+    }, 350);
+  }
+};
