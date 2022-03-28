@@ -6,3 +6,15 @@ const rightBottomQuadrant = document.getElementsByClassName("right-bottom-quadra
 const onButton = document.getElementById("on");
 const goButton = document.getElementById("go");
 const levelCounter = document.getElementById("turn");
+
+onButton.addEventListener ("click", (event) => {
+        let on;
+        if (onButton.checked == true) {
+            on = true;
+            levelCounter.innerHTML = "HI!";
+            onButton.inner.HTML.style.background = "green"
+        } else {
+            on = false
+            levelCounter.innerHTML = "";
+        }
+    })
