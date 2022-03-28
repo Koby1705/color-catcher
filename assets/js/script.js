@@ -7,14 +7,46 @@ const onButton = document.getElementById("on");
 const goButton = document.getElementById("go");
 const levelCounter = document.getElementById("turn");
 
+// EventListener for power button to turn the game on
 onButton.addEventListener ("click", (event) => {
-        let on;
-        if (onButton.checked == true) {
-            on = true;
-            levelCounter.innerHTML = "HI!";
-            onButton.inner.HTML.style.background = "green"
-        } else {
-            on = false
-            levelCounter.innerHTML = "";
-        }
-    })
+    let on;
+
+    if (onButton.checked == true) {
+      on = true;
+      levelCounter.innerHTML = "HI!";
+    } else {
+      on = false
+      levelCounter.innerHTML = "";
+    }
+});
+
+// EventListener for go button to start the game using start game function if the game is on
+// and also if player wins the game
+goButton.addEventListener ("click", (event) => {
+    let on;
+    let win;
+
+    if (on == true || win == true) {
+        startGame ();
+    }
+});
+
+/**
+ *  The main game loop called when the "go" button is pressed
+ */ 
+function startGame () {
+  win = false;
+  levelCounter.innerHTML = 1;
+  let level = 1;
+  let flash = 0;
+  let intervalId = 0;
+  let good = true;
+  let compSequence = [];
+  let humanSequence = [];
+  for (let i = 0; i < 12; i++) {
+    compSequence.push(Math.floor(Math.random () * 4) + 1);
+  }
+  let compTurn = true;
+
+  intervalId = setInterval(gameTurn, 1000);
+}
