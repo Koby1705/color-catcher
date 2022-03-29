@@ -99,3 +99,20 @@ function clearColor () {
 };
 
 
+// 4 functions with which computer flashes the colors at random order making them transparent
+function firstQuadrant () {
+  leftTopQuadrant[0].style.backgroundColor = "transparent"
+};
+
+function secondQuadrant () {
+  rightTopQuadrant[0].style.backgroundColor = "transparent"
+};
+
+function thirdQuadrant () {
+  leftBottomQuadrant[0].style.backgroundColor = "transparent"
+};
+
+function fourthQuadrant () {
+  rightTopQuadrant[0].style.backgroundColor = "transparent"
+};
+
