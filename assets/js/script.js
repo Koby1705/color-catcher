@@ -200,7 +200,7 @@ function checkCorrectAnswers () {
     flash = 0;
     humanSequence = [];
     good = true;
-    intervalId = setInterval(gameTurn, 800)
+    intervalId = setInterval(gameTurn, 1000)
     setTimeout (() => {
     levelCounter.innerHTML = level;
     clearColor ();

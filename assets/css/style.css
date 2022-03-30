@@ -121,3 +121,22 @@ body {
     margin-top: 20px;
     font-weight: 900;
 }
+
+#rules {
+  text-align: center;
+  color: darkblue;
+  font-weight: 900;
+  font-size: 20px;
+  font-style: italic;
+  background-color: rgba(193, 28, 28, 0.6);
+}
+
+#copyright {
+  position: absolute;
+  background-color: rgba(193, 28, 28, 0.6);
+  color: darkblue;
+  bottom: 0;
+  left: 0;
+  font-weight: 900;
+  font-size: 20px;
+}
