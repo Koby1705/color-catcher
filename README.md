@@ -48,3 +48,37 @@ The goal of the Color Catcher game is to test and train memory skills and also p
     1. As a remote code backup which is used in the project.
     2. As a remote server for all users to see the code which is used in the project.
     3. For users to view the deployed version of the website. The deployed version can be viewed [HERE!](https://koby1705.github.io/color-catcher/).
+
+<br>
+
+# Testing
+
+## Manual testing
+
+- Numerous manual tests were done to ensure that the website is working with it's intended purpose and use
+- The website was tested numerous times in Browsers: Chrome, Safari, FireFox and Internet Explorer
+
+## Automated testing
+
+- No errors were found when passing through the official
+  <details>
+  <summary>W3C Validator</summary>
+
+  - [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fkoby1705.github.io%2Fcolor-catcher%2Findex.html)
+  </details>
+
+- No errors were found when passing through the official
+
+  <details>
+  <summary>W3C CSS Validator</summary>
+
+  - [style.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fkoby1705.github.io%2Fcolor-catcher%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  </details>
+
+- No errors were found when passing through the official
+
+  <details>
+  <summary>JSHint Code Quality Tool</summary>
+
+  - [script.js](https://jshint.com/)
+  </details>
