@@ -82,3 +82,16 @@ The goal of the Color Catcher game is to test and train memory skills and also p
 
   - [script.js](https://jshint.com/)
   </details>
+
+# Bugs
+
+- Not completely responsive under 400px, left side of the quadrants is cut off by few px on mobile devices
+
+# Deployment
+
+The site was deployed to Github pages using the following steps:
+
+- In the Github repository, click on the Settings tab.
+- Scroll down and click Pages from the left side navigation menu.
+- From the Source section drop-down menu, select the Main Branch
+- Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display with the successful deployment message: Your site is published at https://koby1705.github.io/color-catcher/
