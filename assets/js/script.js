@@ -127,8 +127,9 @@ function fourthQuadrant () {
 leftTopQuadrant[0].addEventListener('click', (event) => {
   if (on) {
     humanSequence.push(1);
+    checkCorrectAnswers ();
     firstQuadrant ();
-    if(!win) {
+    if (!win) {
       setTimeout(() => {
         clearColor();
       }, 450);
@@ -139,8 +140,9 @@ leftTopQuadrant[0].addEventListener('click', (event) => {
 rightTopQuadrant[0].addEventListener('click', (event) => {
   if (on) {
     humanSequence.push(2);
-    firstQuadrant ();
-    if(!win) {
+    checkCorrectAnswers ();
+    secondQuadrant ();
+    if (!win) {
       setTimeout(() => {
         clearColor();
       }, 450);
@@ -151,8 +153,9 @@ rightTopQuadrant[0].addEventListener('click', (event) => {
 leftBottomQuadrant[0].addEventListener('click', (event) => {
   if (on) {
     humanSequence.push(3);
-    firstQuadrant ();
-    if(!win) {
+    checkCorrectAnswers ();
+    thirdQuadrant ();
+    if (!win) {
       setTimeout(() => {
         clearColor();
       }, 450);
@@ -163,8 +166,9 @@ leftBottomQuadrant[0].addEventListener('click', (event) => {
 rightBottomQuadrant[0].addEventListener('click', (event) => {
   if (on) {
     humanSequence.push(4);
-    firstQuadrant ();
-    if(!win) {
+    checkCorrectAnswers ();
+    fourthQuadrant ();
+    if (!win) {
       setTimeout(() => {
         clearColor();
       }, 450);
@@ -178,5 +182,54 @@ rightBottomQuadrant[0].addEventListener('click', (event) => {
 function congratulations () {
   win = true;
   on = false;
-  levelCounter.innerHTML = "CONGRATS!"
+  levelCounter.innerHTML = "WON!";
 };
+
+/**
+ * Function checks if player is following the sequence correctly, has reached level 12 and won the game or not
+ */
+function checkCorrectAnswers () {
+  if (humanSequence[humanSequence.length - 1] !== compSequence[humanSequence.length - 1]) good = false;
+  
+  // If player don't guess the sequence, it will display NO! in level counter, computer will then keep repeating
+  // the same sequence until player don't get the right sequence and eventually wins the game
+  if (good == false) {
+    levelCounter.innerHTML = "NO!";
+    darkred ();
+    compTurn = true;
+    flash = 0;
+    humanSequence = [];
+    good = true;
+    intervalId = setInterval(gameTurn, 800)
+    setTimeout (() => {
+    levelCounter.innerHTML = level;
+    clearColor ();
+    }, 600)
+  };
+
+  // If player sequence matches level count and is also correct, level will increment by 1,
+  // an extra number is added to sequence array & computer sequence will begin again equal to the number level
+  if (humanSequence.length == level && !win && good == true) {
+  level ++;
+  flash = 0;
+  compTurn = true;
+  humanSequence = [];
+  levelCounter.innerHTML = level;
+  intervalId = setInterval(gameTurn, 1000);
+  }
+
+  // When the player finishes 12 levels cangratulations function will be called to notify the player that he won
+  // and also darkred function will be called to transform all quadrants in darkred colour
+  if (humanSequence.length == 12 && good == true) {
+    congratulations ();
+    darkred ();
+  }
+};
+
+
+function darkred () {
+  leftTopQuadrant[0].style.backgroundColor = "darkred";
+  rightTopQuadrant[0].style.backgroundColor = "darkred";
+  leftBottomQuadrant[0].style.backgroundColor = "darkred";
+  rightBottomQuadrant[0].style.backgroundColor = "darkred";
+}
