@@ -83,9 +83,13 @@ The goal of the Color Catcher game is to test and train memory skills and also p
   - [script.js](https://jshint.com/)
   </details>
 
+<br>
+
 # Bugs
 
 - Not completely responsive under 400px, left side of the quadrants is cut off by few px on mobile devices
+
+<br><br>
 
 # Deployment
 
@@ -95,3 +99,19 @@ The site was deployed to Github pages using the following steps:
 - Scroll down and click Pages from the left side navigation menu.
 - From the Source section drop-down menu, select the Main Branch
 - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display with the successful deployment message: Your site is published at https://koby1705.github.io/color-catcher/
+
+<br>
+
+# Credits
+
+I would like to thank Matt Bodden from Slack community who pointed out to me to identify the problem with using square bracket notation while getting element by class name
+
+## Content
+
+- All text was written by myself
+
+## Code
+
+- Inspiration for the game was taken from few sources [Youtube.com](https://www.youtube.com/watch?v=FEL8gKaIm1Y) & [Youtube.com](https://www.youtube.com/watch?v=W0MxUHlZo6U&t=672s) & [Youtube.com](https://www.youtube.com/watch?v=n_ec3eowFLQ&t=3416s)
+- Most of the code was learnt from [www.codeinstitute.net](https://www.codeinstitute.net)
+- One more great site to mention where a lot of good curriculum could be found is [W3Schools](https://www.w3schools.com/)
