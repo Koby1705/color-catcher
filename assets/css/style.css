@@ -122,6 +122,7 @@ body {
     font-weight: 900;
 }
 
+/* Rules for the game */
 #rules {
   text-align: center;
   color: darkblue;
@@ -131,6 +132,7 @@ body {
   background-color: rgba(193, 28, 28, 0.6);
 }
 
+/* Footer section */
 #copyright {
   position: absolute;
   background-color: rgba(193, 28, 28, 0.6);

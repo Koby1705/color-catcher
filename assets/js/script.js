@@ -20,6 +20,7 @@ let humanSequence = [];
 let compTurn;
 let flash;
 let level;
+let on;
 
 // EventListener for power button to turn the game on
 onButton.addEventListener ("click", (event) => {
@@ -63,7 +64,7 @@ function startGame () {
   
   // Runs the gameTurn function every 1sec
   intervalId = setInterval(gameTurn, 1000);
-};
+}
 
 /**
  * When invoked it's going to stop flashes of the the colors for 350ms in random order & increments the level by 1
@@ -92,7 +93,7 @@ function gameTurn () {
       flash++;
     }, 350);
   }
-};
+}
 
 /**
  * Returns the colors to their original state after each flash is done by the computer
@@ -102,25 +103,25 @@ function clearColor () {
   rightTopQuadrant[0].style.backgroundColor = "red";
   leftBottomQuadrant[0].style.backgroundColor = "gold";
   rightBottomQuadrant[0].style.backgroundColor = "green";
-};
+}
 
 
 // 4 functions with which computer flashes the colors at random order making them black
 function firstQuadrant () {
   leftTopQuadrant[0].style.backgroundColor = "black";
-};
+}
 
 function secondQuadrant () {
   rightTopQuadrant[0].style.backgroundColor = "black";
-};
+}
 
 function thirdQuadrant () {
   leftBottomQuadrant[0].style.backgroundColor = "black";
-};
+}
 
 function fourthQuadrant () {
   rightBottomQuadrant[0].style.backgroundColor = "black";
-};
+}
 
 // 4 eventListeners which allow user to click on certain quadrant when the game is on, and while the game is not won 
 // the colors are going to be cleared after 450ms and after user clicks any quadrant by calling clearColor function
@@ -183,7 +184,7 @@ function congratulations () {
   win = true;
   on = false;
   levelCounter.innerHTML = "WON!";
-};
+}
 
 /**
  * Function checks if player is following the sequence correctly, has reached level 12 and won the game or not
@@ -200,12 +201,12 @@ function checkCorrectAnswers () {
     flash = 0;
     humanSequence = [];
     good = true;
-    intervalId = setInterval(gameTurn, 1000)
+    intervalId = setInterval(gameTurn, 1000);
     setTimeout (() => {
     levelCounter.innerHTML = level;
     clearColor ();
-    }, 600)
-  };
+    }, 600);
+  }
 
   // If player sequence matches level count and is also correct, level will increment by 1,
   // an extra number is added to sequence array & computer sequence will begin again equal to the number level
@@ -224,7 +225,7 @@ function checkCorrectAnswers () {
     congratulations ();
     darkred ();
   }
-};
+}
 
 
 function darkred () {
