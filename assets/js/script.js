@@ -171,3 +171,12 @@ rightBottomQuadrant[0].addEventListener('click', (event) => {
     }
   }
 });
+
+/**
+ * Endgame function which congratulates the winner on being successful
+ */
+function congratulations () {
+  win = true;
+  on = false;
+  levelCounter.innerHTML = "CONGRATS!"
+};
