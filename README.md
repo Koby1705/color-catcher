@@ -19,3 +19,10 @@ The goal of the Color Catcher game is to test and train memory skills and also p
 - When I make a mistake, the game informs me of it saying NO! and the whole pattern repeats, allowing me to try again endlessly
 - When I get the sequence right for 12 levels, I am informed I won the game and I can start all over again 
 
+## Features
+
+- 4 buttons (navy, red, yellow, green)
+- 12 levels
+- Power button to turn on the game
+- GO button to start the game
+- After every mistake the computer sequence is repeated so player can try again
