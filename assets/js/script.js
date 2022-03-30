@@ -53,12 +53,15 @@ function startGame () {
   good = true;
   compSequence = [];
   levelCounter.innerHTML = 1;
-
+  
+  // Creates and loops through array with 12 random numbers(levels), from 1-4 using Math.floor to round the numbers
   for (let i = 0; i < 12; i++) {
     compSequence.push(Math.floor(Math.random() * 4) + 1);
   }
+  // Starts with the computer flashing lights
   compTurn = true;
-
+  
+  // Runs the gameTurn function every 1sec
   intervalId = setInterval(gameTurn, 1000);
 };
 
@@ -69,6 +72,7 @@ function startGame () {
 function gameTurn () {
   on = false;
 
+  // Depends on which level the game is, equals the number of flashes
   if (flash == level) {
     on = true;
     compTurn = false;
@@ -76,6 +80,7 @@ function gameTurn () {
     clearColor ();
   }
 
+  // When it's computer turn, depending on which item is in the array corresponds the appropriate function defined below
   if (compTurn) {
     clearColor ();
     setTimeout (() => {
