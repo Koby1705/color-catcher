@@ -7,11 +7,16 @@ const onButton = document.getElementById("on");
 const goButton = document.getElementById("go");
 const levelCounter = document.getElementById("turn");
 
+// Variables declared at global scope
 let intervalId;
 let win;
 let good;
+// Empty array in which computer performs the random sequence
 let compSequence = [];
+
+// Empty array in which player tries to repeat the computer sequence to win the game
 let humanSequence = [];
+
 let compTurn;
 let flash;
 let level;
@@ -47,7 +52,6 @@ function startGame () {
   intervalId = 0;
   good = true;
   compSequence = [];
-  humanSequence = [];
   levelCounter.innerHTML = 1;
 
   for (let i = 0; i < 12; i++) {
