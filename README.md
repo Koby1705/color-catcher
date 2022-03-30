@@ -4,6 +4,28 @@ Based on the famous electronic game of memory skill  invented in 1978. The game 
 
 ![Color Catcher](assets/images-readme.md/color-catcher-game-doc.png)
 
+## Contents Table
+
+1. [**UX**](#ux)
+   - [*Project Purpose*](#project-purpose)
+   - [*User Stories*](#user-stories)
+
+2. [**FEATURES**](#features)
+
+3. [**TECHNOLOGIES**](#technologies)
+
+4. [**TESTING**](#testing)
+   - [*Manual Testing*](#manual-testing)
+   - [*Automated Testing*](#automated-testing)
+
+5. [**BUGS**](#bugs)
+
+6. [**DEPLOYMENT**](#deployment)
+
+7. [**CREDITS**](#credits)
+    - [*Content*](#content)
+    - [*Code*](#code)
+
 ## UX
 
 ### Project Purpose
