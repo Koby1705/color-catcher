@@ -26,3 +26,25 @@ The goal of the Color Catcher game is to test and train memory skills and also p
 - Power button to turn on the game
 - GO button to start the game
 - After every mistake the computer sequence is repeated so player can try again
+- Level counter
+<br>
+<div align="center">
+
+![Level counter](/assets/images-readme.md/level-counter-doc.png)
+
+</div>
+<br>
+
+# Technologies
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+  - Used to structure page content
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+  - Used for the page presentation
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+  - Used to produce game logic
+- [GitHub](https://github.com/)
+    - Github is used: 
+    1. As a remote code backup which is used in the project.
+    2. As a remote server for all users to see the code which is used in the project.
+    3. For users to view the deployed version of the website. The deployed version can be viewed [HERE!](https://koby1705.github.io/color-catcher/).
