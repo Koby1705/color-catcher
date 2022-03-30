@@ -122,3 +122,52 @@ function fourthQuadrant () {
   rightBottomQuadrant[0].style.backgroundColor = "black";
 };
 
+// 4 eventListeners which allow user to click on certain quadrant when the game is on, and while the game is not won 
+// the colors are going to be cleared after 450ms and after user clicks any quadrant by calling clearColor function
+leftTopQuadrant[0].addEventListener('click', (event) => {
+  if (on) {
+    humanSequence.push(1);
+    firstQuadrant ();
+    if(!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 450);
+    }
+  }
+});
+
+rightTopQuadrant[0].addEventListener('click', (event) => {
+  if (on) {
+    humanSequence.push(2);
+    firstQuadrant ();
+    if(!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 450);
+    }
+  }
+});
+
+leftBottomQuadrant[0].addEventListener('click', (event) => {
+  if (on) {
+    humanSequence.push(3);
+    firstQuadrant ();
+    if(!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 450);
+    }
+  }
+});
+
+rightBottomQuadrant[0].addEventListener('click', (event) => {
+  if (on) {
+    humanSequence.push(4);
+    firstQuadrant ();
+    if(!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 450);
+    }
+  }
+});
