@@ -143,3 +143,23 @@ body {
   width: 100%;
   text-align: center;
 }
+
+
+/* Media queries for 420px and down */
+@media screen and (max-width: 420px) {
+  .left-top-quadrant {
+    border-top-left-radius: 90vw;
+  }
+
+  .right-top-quadrant {
+    border-top-right-radius: 90vw;
+  }
+
+  .left-bottom-quadrant {
+    border-bottom-left-radius: 90vw;
+  }
+
+  .right-bottom-quadrant {
+    border-bottom-right-radius: 90vw;
+  }
+}
